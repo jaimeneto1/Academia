@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="@+id/imgElevacaoLateral" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/titulomain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -79,7 +79,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textoel_frontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -89,7 +89,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imagem6" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textoabdominal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
@@ -100,7 +100,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imgAbdominal" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textocrucifixo"
         android:layout_width="83dp"
         android:layout_height="23dp"
         android:layout_marginTop="24dp"

@@ -27,7 +27,7 @@ public class AcademiaActivity extends AppCompatActivity {
         ImageView imgAbdominal = findViewById(R.id.imgAbdominal);
         imgAbdominal.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //quando apertar na foto, vai de AcademiaActivity pra AbdominalActivity
                 Intent intent = new Intent(AcademiaActivity.this, AbdominalActivity.class);
                 startActivity(intent);
             }
@@ -36,7 +36,7 @@ public class AcademiaActivity extends AppCompatActivity {
         ImageView imgElevacaoLateral = findViewById(R.id.imgElevacaoLateral);
         imgElevacaoLateral.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //quando apertar na foto, vai de AcademiaActivity pra ElevacaoLateralActivity
                 Intent intent = new Intent(AcademiaActivity.this, ElevacaoLateralActivity.class);
                 startActivity(intent);
             }
