@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">Arenagym1</string>
+    <string-array name="exercicios_abdominal">
+        <item>Prancha</item>
+        <item>Infra(Inferior)</item>
+        <item>Oblíquo</item>
+        <item>Remador</item>
+        <item>Supra(Convencional)</item>
+    </string-array>
+    <string-array name="repeticoes_padrao">
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+    <string-array name="pesos_padrao">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
 </resources>

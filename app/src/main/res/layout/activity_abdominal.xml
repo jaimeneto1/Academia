@@ -24,139 +24,164 @@
     <!-- Cabeçalhos das Colunas -->
     <TextView
         android:id="@+id/labelReps"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="124dp"
         android:text="Repetições"
         android:textStyle="bold"
+        android:textAlignment="center"
         app:layout_constraintEnd_toStartOf="@+id/labelExercicio"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titulo" />
 
     <TextView
         android:id="@+id/labelExercicio"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Exercício"
         android:textStyle="bold"
+        android:textAlignment="center"
         app:layout_constraintBaseline_toBaselineOf="@id/labelReps"
         app:layout_constraintEnd_toStartOf="@+id/labelTempo"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/labelReps" />
 
     <TextView
         android:id="@+id/labelTempo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Tempo"
         android:textStyle="bold"
+        android:textAlignment="center"
         app:layout_constraintBaseline_toBaselineOf="@id/labelReps"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/labelExercicio" />
 
     <!-- Linha 1 -->
-    <EditText
-        android:id="@+id/etReps1"
-        android:layout_width="80dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilReps1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="0"
-        android:inputType="number"
-        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="@id/labelReps"
         app:layout_constraintStart_toStartOf="@id/labelReps"
-        app:layout_constraintTop_toBottomOf="@id/labelReps" />
+        app:layout_constraintTop_toBottomOf="@id/labelReps">
 
-    <EditText
-        android:id="@+id/etExercicio1"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:hint="Tipo"
-        android:inputType="text"
-        android:textAlignment="center"
-        app:layout_constraintBaseline_toBaselineOf="@id/etReps1"
+        <AutoCompleteTextView
+            android:id="@+id/etReps1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:inputType="number"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textAlignment="center" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spExercicio1"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:entries="@array/exercicios_abdominal"
+        app:layout_constraintBottom_toBottomOf="@id/tilReps1"
         app:layout_constraintEnd_toEndOf="@id/labelExercicio"
-        app:layout_constraintStart_toStartOf="@id/labelExercicio" />
+        app:layout_constraintStart_toStartOf="@id/labelExercicio"
+        app:layout_constraintTop_toTopOf="@id/tilReps1" />
 
     <TextView
         android:id="@+id/tvTempo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00:00"
-        app:layout_constraintBottom_toBottomOf="@id/etExercicio1"
+        app:layout_constraintBottom_toBottomOf="@id/spExercicio1"
         app:layout_constraintEnd_toEndOf="@id/labelTempo"
         app:layout_constraintStart_toStartOf="@id/labelTempo"
-        app:layout_constraintTop_toTopOf="@id/etExercicio1" />
+        app:layout_constraintTop_toTopOf="@id/spExercicio1" />
 
     <!-- Linha 2 -->
-    <EditText
-        android:id="@+id/etReps2"
-        android:layout_width="80dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilReps2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="0"
-        android:inputType="number"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@id/etReps1"
-        app:layout_constraintStart_toStartOf="@id/etReps1"
-        app:layout_constraintTop_toBottomOf="@id/etReps1" />
+        app:layout_constraintEnd_toEndOf="@id/tilReps1"
+        app:layout_constraintStart_toStartOf="@id/tilReps1"
+        app:layout_constraintTop_toBottomOf="@id/tilReps1">
 
-    <EditText
-        android:id="@+id/etExercicio2"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:hint="Tipo"
-        android:inputType="text"
-        android:textAlignment="center"
-        app:layout_constraintBaseline_toBaselineOf="@id/etReps2"
-        app:layout_constraintEnd_toEndOf="@id/etExercicio1"
-        app:layout_constraintStart_toStartOf="@id/etExercicio1" />
+        <AutoCompleteTextView
+            android:id="@+id/etReps2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:inputType="number"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textAlignment="center" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spExercicio2"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:entries="@array/exercicios_abdominal"
+        app:layout_constraintBottom_toBottomOf="@id/tilReps2"
+        app:layout_constraintEnd_toEndOf="@id/spExercicio1"
+        app:layout_constraintStart_toStartOf="@id/spExercicio1"
+        app:layout_constraintTop_toTopOf="@id/tilReps2" />
 
     <TextView
         android:id="@+id/tvTempo2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00:00"
-        app:layout_constraintBottom_toBottomOf="@id/etExercicio2"
+        app:layout_constraintBottom_toBottomOf="@id/spExercicio2"
         app:layout_constraintEnd_toEndOf="@id/tvTempo1"
         app:layout_constraintStart_toStartOf="@id/tvTempo1"
-        app:layout_constraintTop_toTopOf="@id/etExercicio2" />
+        app:layout_constraintTop_toTopOf="@id/spExercicio2" />
 
     <!-- Linha 3 -->
-    <EditText
-        android:id="@+id/etReps3"
-        android:layout_width="80dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilReps3"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="0"
-        android:inputType="number"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@id/etReps2"
-        app:layout_constraintStart_toStartOf="@id/etReps2"
-        app:layout_constraintTop_toBottomOf="@id/etReps2" />
+        app:layout_constraintEnd_toEndOf="@id/tilReps2"
+        app:layout_constraintStart_toStartOf="@id/tilReps2"
+        app:layout_constraintTop_toBottomOf="@id/tilReps2">
 
-    <EditText
-        android:id="@+id/etExercicio3"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:hint="Tipo"
-        android:inputType="text"
-        android:textAlignment="center"
-        app:layout_constraintBaseline_toBaselineOf="@id/etReps3"
-        app:layout_constraintEnd_toEndOf="@id/etExercicio2"
-        app:layout_constraintStart_toStartOf="@id/etExercicio2" />
+        <AutoCompleteTextView
+            android:id="@+id/etReps3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:inputType="number"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textAlignment="center" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spExercicio3"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:entries="@array/exercicios_abdominal"
+        app:layout_constraintBottom_toBottomOf="@id/tilReps3"
+        app:layout_constraintEnd_toEndOf="@id/spExercicio2"
+        app:layout_constraintStart_toStartOf="@id/spExercicio2"
+        app:layout_constraintTop_toTopOf="@id/tilReps3" />
 
     <TextView
         android:id="@+id/tvTempo3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00:00"
-        app:layout_constraintBottom_toBottomOf="@id/etExercicio3"
+        app:layout_constraintBottom_toBottomOf="@id/spExercicio3"
         app:layout_constraintEnd_toEndOf="@id/tvTempo2"
         app:layout_constraintStart_toStartOf="@id/tvTempo2"
-        app:layout_constraintTop_toTopOf="@id/etExercicio3" />
+        app:layout_constraintTop_toTopOf="@id/spExercicio3" />
 
     <Button
         android:id="@+id/button"
@@ -166,6 +191,6 @@
         android:text="Play/Stop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etReps3" />
+        app:layout_constraintTop_toBottomOf="@id/tilReps3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

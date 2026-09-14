@@ -11,11 +11,13 @@
         android:id="@+id/textoel_lateral"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="119dp"
-        android:text="Elevação Frontal"
+        android:layout_marginTop="28dp"
+        android:text="Elevação Lateral"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="@+id/imgElevacaoLateral"
         app:layout_constraintStart_toStartOf="@+id/imgElevacaoLateral"
-        app:layout_constraintTop_toTopOf="@+id/imgElevacaoLateral" />
+        app:layout_constraintTop_toBottomOf="@+id/imgElevacaoLateral" />
 
     <TextView
         android:id="@+id/titulomain"
@@ -94,9 +96,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="Abdominal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
-        app:layout_constraintStart_toStartOf="parent"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="@+id/imgAbdominal"
+        app:layout_constraintStart_toStartOf="@+id/imgAbdominal"
         app:layout_constraintTop_toBottomOf="@+id/imgAbdominal" />
 
     <TextView

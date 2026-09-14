@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,19 +25,19 @@ public class AcademiaActivity extends AppCompatActivity {
             return insets;
         });
 
-        ImageView imgAbdominal = findViewById(R.id.imgAbdominal);
-        imgAbdominal.setOnClickListener(new View.OnClickListener() {
+        TextView textoAbdominal = findViewById(R.id.textoabdominal);
+        textoAbdominal.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { //quando apertar na foto, vai de AcademiaActivity pra AbdominalActivity
+            public void onClick(View v) { //quando apertar no texto, vai de AcademiaActivity pra AbdominalActivity
                 Intent intent = new Intent(AcademiaActivity.this, AbdominalActivity.class);
                 startActivity(intent);
             }
         });
 
-        ImageView imgElevacaoLateral = findViewById(R.id.imgElevacaoLateral);
-        imgElevacaoLateral.setOnClickListener(new View.OnClickListener() {
+        TextView textoElevacaoLateral = findViewById(R.id.textoel_lateral);
+        textoElevacaoLateral.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { //quando apertar na foto, vai de AcademiaActivity pra ElevacaoLateralActivity
+            public void onClick(View v) { //quando apertar no texto, vai de AcademiaActivity pra ElevacaoLateralActivity
                 Intent intent = new Intent(AcademiaActivity.this, ElevacaoLateralActivity.class);
                 startActivity(intent);
             }
